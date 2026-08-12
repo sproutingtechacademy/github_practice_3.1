@@ -1,76 +1,210 @@
-<!DOCTYPE html> 
-<html lang="th"> 
-  <head> 
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>JobPortal</title> <link rel="stylesheet" href="style.css" /> </head> 
-  <body> <!-- Navbar --> <nav> 
-    <div class="logo">JobPortal</div> 
-    <ul> 
-      <li>
-        <a href="#">หน้าแรก</a>
-      </li> 
-      <li>
-        <a href="#">ตำแหน่งงาน</a>
-      </li> 
-      <li>
-        <a href="#">เกี่ยวกับเรา</a>
-      </li> 
-      <li>
-        <a href="#">ติดต่อ</a>
-      </li> 
-    </ul> 
-    <button>เข้าสู่ระบบ</button> 
-  </nav> 
-  <!-- Hero Section --> 
-    <header class="hero"> 
-      <div class="hero-text"> 
-        <h1>ร่วมเป็นส่วนหนึ่งกับทีมงานของเรา</h1> 
-        <p>ค้นหาโอกาสในการทำงานที่ตรงกับความสามารถของคุณ</p> 
-      </div> 
-      <div class="hero-image"> 
-        <img src="https://via.placeholder.com/500x300" alt="Hero Image"> 
-      </div> 
-    </header> 
-    <!-- Application Form --> 
-    <main> 
-      <section class="application-form"> 
-        <h2>แบบฟอร์มสมัครงาน</h2> 
-        <p>กรุณากรอกข้อมูลให้ครบถ้วนเพื่อดำเนินการสมัครงาน</p> 
-        <!-- ข้อมูลส่วนตัว --> 
-        <section> 
-          <h3>ข้อมูลส่วนตัว</h3> 
-        </section> 
-        <!-- ประวัติการศึกษา --> 
-        <section> 
-          <h3>ประวัติการศึกษา</h3> 
-        </section> 
-        <!-- ประวัติการทำงาน --> 
-        <section> 
-          <h3>ประวัติการทำงาน</h3> 
-        </section> 
-        <!-- ประเภทการจ้างงาน --> 
-        <section> 
-          <h3>ประเภทการจ้างงานที่ต้องการ</h3> 
-        </section> 
-        <!-- ทักษะ --> 
-        <section> 
-          <h3>ทักษะที่มี</h3> 
-        </section> 
-        <button type="submit">ส่งใบสมัคร</button> 
-      </section> 
-    </main> 
-    <!-- Footer --> 
-    <footer> 
-      <div> 
-        <h4>ติดต่อเรา</h4> 
-        <p>email@example.com</p> 
-        <p>000-000-0000</p> 
-      </div> 
-      <div> 
-        <h4>JobPortal</h4> 
-        <p>แพลตฟอร์มหางานออนไลน์</p> 
-      </div> 
-    </footer> 
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobPortal</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- เพิ่ม FontAwesome สำหรับไอคอนใน Navbar และฟอร์ม -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <i class="fas fa-briefcase"></i> JobPortal
+      </div>
+      <ul>
+        <li><a href="#">หน้าแรก</a></li>
+        <li><a href="#">ตำแหน่งงาน</a></li>
+        <li><a href="#">เกี่ยวกับเรา</a></li>
+        <li><a href="#">ติดต่อ</a></li>
+      </ul>
+      <button class="btn-login">เข้าสู่ระบบ</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            ร่วมเป็นส่วนหนึ่ง<br />
+            <span>กับทีมงานของเรา</span>
+          </h1>
+          <p>
+            ค้นหาโอกาสในการทำงานที่ตรงกับความสามารถของคุณ<br />
+            พร้อมเติบโตไปด้วยกันกับองค์กรชั้นนำ
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYlmKqnlDKGY-iVXFEP2iuq2f4_beQasrTygMWaoCbw&s=10?" alt="Hero Image" />
+        </div>
+      </div>
+    </header>
+    <!-- Application Form -->
+    <main>
+      <section class="application-container">
+        <h2>แบบฟอร์มสมัครงาน</h2>
+        <p>กรุณากรอกข้อมูลให้ครบถ้วนเพื่อดำเนินการสมัครงาน</p>
+        <form class="application-form">
+          <!-- ข้อมูลส่วนตัว -->
+          <fieldset>
+            <legend>
+              <i class="fas fa-user-circle"></i> ข้อมูลส่วนตัว
+            </legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">ชื่อ *</label>
+                <input type="text" id="fname" name="fname" placeholder="กรุณากรอกชื่อของคุณ" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">นามสกุล *</label>
+                <input type="text" id="lname" name="lname" placeholder="กรุณากรอกนามสกุลของคุณ" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">อีเมล *</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์ *</label>
+                <input type="tel" id="phone" name="phone" placeholder="0XX-XXX-XXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">ที่อยู่ *</label>
+              <textarea id="address" name="address" placeholder="กรุณากรอกที่อยู่ปัจจุบัน" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="province">จังหวัด *</label>
+              <select id="province" name="province" required>
+                <option value="" disabled selected>เลือกจังหวัด</option>
+                <option value="bangkok">กรุงเทพมหานคร</option>
+                <!-- เพิ่มจังหวัดอื่นๆ -->
+              </select>
+            </div>
+          </fieldset>
+          <!-- ประวัติการศึกษา -->
+          <fieldset>
+            <legend>
+              <i class="fas fa-user-graduate"></i> ประวัติการศึกษา
+            </legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="education-level">ระดับการศึกษา *</label>
+                <input type="text" id="education-level" name="education-level" placeholder="เช่น ปริญญาตรี" required />
+              </div>
+              <div class="form-group">
+                <label for="institution">สถาบันการศึกษา *</label>
+                <input type="text" id="institution" name="institution" placeholder="ชื่อสถาบันการศึกษา" required />
+              </div>
+            </div>
+            <div class="form-group short-input">
+              <label for="grad-year">ปีที่จบการศึกษา *</label>
+              <input type="text" id="grad-year" name="grad-year" placeholder="พ.ศ. 2566" required />
+            </div>
+          </fieldset>
+          <!-- ประวัติการทำงาน -->
+          <fieldset>
+            <legend>
+              <i class="fas fa-briefcase"></i> ประวัติการทำงาน
+            </legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="last-company">บริษัทล่าสุดที่ทำงาน</label>
+                <input type="text" id="last-company" name="last-company" placeholder="ชื่อบริษัท" />
+              </div>
+              <div class="form-group">
+                <label for="last-position">ตำแหน่งงาน</label>
+                <input type="text" id="last-position" name="last-position" placeholder="ตำแหน่งงานล่าสุด" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="experience">ประสบการณ์การทำงาน</label>
+              <textarea id="experience" name="experience" placeholder="อธิบายเกี่ยวกับประสบการณ์การทำงานของคุณ"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- ประเภทการจ้างงาน -->
+          <fieldset>
+            <legend>ประเภทการจ้างงานที่ต้องการ *</legend>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="job-type" value="full-time" required />
+                พนักงานประจำ
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="job-type" value="part-time" />
+                พนักงานชั่วคราว
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="job-type" value="freelance" />
+                ฟรีแลนซ์
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="job-type" value="internship" />
+                นักศึกษาฝึกงาน
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- ทักษะ -->
+          <fieldset>
+            <legend>ทักษะที่มี (เลือกได้หลายข้อ)</legend>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="skills" value="office" />
+                Microsoft Office
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="skills" value="english" />
+                การสื่อสารภาษาอังกฤษ
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="skills" value="teamwork" />
+                การทำงานเป็นทีม
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="skills" value="problem-solving" />
+                การแก้ปัญหา
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> ส่งใบสมัคร
+          </button>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h4>ติดต่อเรา</h4>
+          <p><i class="fas fa-envelope"></i> contact@jobportal.com</p>
+          <p><i class="fas fa-phone"></i> 098-765-4321</p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท แขวงคลองเตย<br />เขตคลองเตย กรุงเทพฯ 10110</p>
+        </div>
+        <div class="footer-section brand-info">
+          <div class="logo">
+            <i class="fas fa-briefcase"></i> JobPortal
+          </div>
+          <p>แพลตฟอร์มหางานออนไลน์ เชื่อมต่อผู้หางานกับบริษัทชั้นนำทั่วประเทศ</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JobPortal. สงวนลิขสิทธิ์ทุกประการ</p>
+      </div>
+    </footer>
+
   </body> 
 </html>
+ 
