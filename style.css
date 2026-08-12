@@ -39,6 +39,8 @@ ul {
     padding: 0 20px;
 }
 
+
+
 .navbar {
     background-color: var(--bg-color);
     padding: 20px 0;
@@ -132,4 +134,85 @@ ul {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-contact h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-contact ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+.footer-contact ul li i {
+    margin-top: 4px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.footer-logo i {
+    color: #111;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    color: #9ca3af;
 }
